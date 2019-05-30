@@ -1,0 +1,8 @@
+<h1>id: <%= @mr.id %>の氏ページ</h1>
+
+<p><%= @mr.mr %></p>
+
+<%= link_to '氏投稿', new_mr_path %>
+<%= link_to 'このメッセージを編集する', edit_mr_path(@mr) %>
+<%= link_to 'このメッセージを削除する', @mr, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '一覧に戻る', middles_path %>

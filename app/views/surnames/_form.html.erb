@@ -1,0 +1,16 @@
+<%= form_for(surname) do |f| %>
+  <% if surname.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% surname.errors.full_messages.each do |surname| %>
+          <li><%= surname %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :surname, 'メッセージ' %>
+  <%= f.text_field :surname %>
+
+  <%= f.submit '投稿' %>
+<% end %>
