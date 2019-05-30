@@ -1,0 +1,16 @@
+<%= form_for(commonname) do |f|  %>
+  <% if commonname.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% commonname.errors.full_messages.each do |commonname| %>
+          <li><%= commonname %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :commonname, '通称' %>
+  <%= f.text_field :commonname %>
+  
+  <%= f.submit '投稿' %>
+<% end %>
