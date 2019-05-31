@@ -10,6 +10,7 @@ class MiddlesController < ApplicationController
   end
 
   def new
+    @middle = Middel.new
   end
 
   def create
