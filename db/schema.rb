@@ -10,12 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190520082604) do
+ActiveRecord::Schema.define(version: 20190531044534) do
 
   create_table "commonnames", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "commonname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "middles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "mr_id"
+    t.integer  "surname_id"
+    t.string   "Lname"
+    t.integer  "commonname_id"
+    t.string   "Fname"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["commonname_id"], name: "index_middles_on_commonname_id", using: :btree
+    t.index ["mr_id"], name: "index_middles_on_mr_id", using: :btree
+    t.index ["surname_id"], name: "index_middles_on_surname_id", using: :btree
   end
 
   create_table "mrs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -38,4 +51,7 @@ ActiveRecord::Schema.define(version: 20190520082604) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "middles", "commonnames"
+  add_foreign_key "middles", "mrs"
+  add_foreign_key "middles", "surnames"
 end
