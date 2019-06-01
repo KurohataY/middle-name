@@ -1,10 +1,15 @@
-<%= form_for(middle) do |f| %>
+<h3>自分の名前を入力してください！</h3>
 
-  <%= f.label :middle, '苗字' %>
-  <%= f.text_field :middle %>
+<%= form_for (@middle)do |f| %>
+  <%= f.label :Lname, '名字' %>
+  <%= f.text_field :Lname %>
   
-  <%= f.label :middle, '名前' %>
-  <%= f.text_field :middle %>
-
+  <%= f.label :Fname, '名前' %>
+  <%= f.text_field :Fname %>
+  
+  <%= f.hidden_field :mr, value: @mr%>
+  <%= f.hidden_field :surname, value: @surname%>
+  <%= f.hidden_field :commonname, value: @commonname%>
   <%= f.submit '投稿' %>
 <% end %>
+
