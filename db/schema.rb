@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20190531044534) do
   end
 
   create_table "middles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
     t.string   "mr"
     t.string   "surname"
     t.string   "Lname"
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 20190531044534) do
     t.string   "Fname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_middles_on_user_id", using: :btree
   end
 
   create_table "mrs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -48,4 +50,5 @@ ActiveRecord::Schema.define(version: 20190531044534) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "middles", "users"
 end
