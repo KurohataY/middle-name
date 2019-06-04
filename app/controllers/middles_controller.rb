@@ -1,5 +1,6 @@
 class MiddlesController < ApplicationController
   def index
+    @middle = Middle.find(params[:id])
   end
 
   def show
