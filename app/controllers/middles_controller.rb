@@ -1,6 +1,11 @@
 class MiddlesController < ApplicationController
+  before_action :require_user_logged_in
+  before_action :set_middle, only: [:show, :edit, :update, :destroy]
+
+  
   def index
-    @middle = Middle.find(params[:id])
+    @middle = current_user.middles.last
+    @middles = current_user.middles
   end
 
   def show
@@ -9,17 +14,14 @@ class MiddlesController < ApplicationController
 
   def new
     @middle = Middle.new
-    
     @commonname = Commonname.where( 'id >= ?', rand(Commonname.first.id..Commonname.last.id) ).first.commonname
     @mr = Mr.where( 'id >= ?', rand(Mr.first.id..Mr.last.id) ).first.mr
     @surname = Surname.where( 'id >= ?', rand(Surname.first.id..Surname.last.id) ).first.surname
   end
 
   def create
-    
-    
-    @middle = Middle.new(middle_params)
-    
+    @middle = current_user.middles.build(middle_params)
+
     if @middle.save
       flash[:success] = '保存成功！'
       redirect_to middles_path
@@ -33,9 +35,28 @@ class MiddlesController < ApplicationController
   end
 
   def update
+    if @middle.update(task_params)
+      flash[:success] = 'task は正常に更新されました'
+      redirect_to @task
+    else
+      flash.now[:danger] = 'task は更新されませんでした'
+      render :edit
+    end
   end
 
   def destroy
+    @middle.destroy
+
+    flash[:success] = 'ミドルネームは正常に削除されました'
+    redirect_to root_url
+ 
+  end
+  
+  def set_middle
+    @task = current_user.middles.find_by(id: params[:id])
+    unless @task
+      redirect_to root_url
+    end
   end
   
   def middle_params
