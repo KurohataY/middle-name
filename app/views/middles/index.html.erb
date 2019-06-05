@@ -1,7 +1,25 @@
-<% @middle.each do |middle| %>
-<%= middle.mr  %>
-<%= middle.surname  %>
-<%= middle.Lname  %>
-<%= middle.commonname  %>
-<%= middle.Fname  %>
+<h2>最新の投稿</h2>
+<li>
+  <%= @middle.mr  %>
+  <%= @middle.surname  %>
+  <%= @middle.Lname  %>
+  <%= @middle.commonname  %>
+  <%= @middle.Fname  %>
+</li>
+
+
+<h2>今までの履歴一覧</h2>
+
+<% @middles.each do |middle| %>
+  <li>
+    <%= middle.mr  %>
+    <%= middle.surname  %>
+    <%= middle.Lname  %>
+    <%= middle.commonname  %>
+    <%= middle.Fname  %>
+  </li>
 <% end %>
+
+
+<%= link_to '削除', @middle, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '作り直す', new_middle_path, class: 'btn btn-lg btn-primary' %>
