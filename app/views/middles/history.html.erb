@@ -1,0 +1,12 @@
+<%# 履歴の表示 %>
+<h2 class="text-center">今までの履歴一覧</h2>
+
+<% @middles.each do |middle| %>
+  <li class="text-center">
+    <%= middle.mr  %>
+    <%= middle.surname  %>
+    <%= middle.Lname  %>
+    <%= middle.commonname  %>
+    <%= middle.Fname  %>
+  </li>
+<% end %>

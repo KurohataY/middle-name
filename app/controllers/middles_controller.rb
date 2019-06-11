@@ -7,6 +7,10 @@ class MiddlesController < ApplicationController
     @middle = current_user.middles.last
     @middles = current_user.middles
   end
+  
+  def history
+    @middles = current_user.middles
+  end
 
   def show
     @middle = Middle.find(params[:id])
