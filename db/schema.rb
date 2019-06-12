@@ -20,13 +20,19 @@ ActiveRecord::Schema.define(version: 20190531044534) do
 
   create_table "middles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
+    t.integer  "mr_id"
     t.string   "mr"
+    t.integer  "surname_id"
     t.string   "surname"
     t.string   "Lname"
+    t.integer  "commonname_id"
     t.string   "commonname"
     t.string   "Fname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["commonname_id"], name: "index_middles_on_commonname_id", using: :btree
+    t.index ["mr_id"], name: "index_middles_on_mr_id", using: :btree
+    t.index ["surname_id"], name: "index_middles_on_surname_id", using: :btree
     t.index ["user_id"], name: "index_middles_on_user_id", using: :btree
   end
 
@@ -50,5 +56,8 @@ ActiveRecord::Schema.define(version: 20190531044534) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "middles", "commonnames"
+  add_foreign_key "middles", "mrs"
+  add_foreign_key "middles", "surnames"
   add_foreign_key "middles", "users"
 end

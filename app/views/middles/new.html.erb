@@ -7,9 +7,14 @@
   <%= f.label :Fname, '名前' %>
   <%= f.text_field :Fname %>
   
-  <%= f.hidden_field :mr, value: @mr%>
-  <%= f.hidden_field :surname, value: @surname%>
-  <%= f.hidden_field :commonname, value: @commonname%>
+  <%= f.hidden_field :mr, value: @mr.mr%>
+  <%= f.hidden_field :surname, value: @surname.surname%>
+  <%= f.hidden_field :commonname, value: @commonname.commonname%>
+  
+  <%= f.hidden_field :mr_id, value: @mr.id%>
+  <%= f.hidden_field :surname_id, value: @surname.id%>
+  <%= f.hidden_field :commonname_id, value: @commonname.id%>
+  
   <%= f.submit '投稿' %>
 <% end %>
 
