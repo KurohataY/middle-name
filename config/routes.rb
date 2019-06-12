@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'toppages/index'
   
   get 'middles/history'
+  
+  get 'rankings/middle', to: 'rankings#middle'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'toppages#index'
