@@ -4,4 +4,6 @@ class Mr < ApplicationRecord
   def self.ranking
     self.group(:mr_id).order('count_mr_id').limit(2).count(:mr_id)
   end
+  
+  belongs_to :middle
 end
