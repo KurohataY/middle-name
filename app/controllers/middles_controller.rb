@@ -64,7 +64,7 @@ class MiddlesController < ApplicationController
   end
   
   def middle_params
-    params.require(:middle).permit(:Lname,:Fname,:mr,:surname,:commonname)
+    params.require(:middle).permit(:Lname,:Fname,:mr,:surname,:commonname,:commonname_id,:surname_id,:mr_id)
   end
   
 end
