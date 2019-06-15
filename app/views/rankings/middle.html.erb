@@ -1,1 +1,58 @@
-
+<h1>ランキング</h1>
+<h2>氏</h2>
+<% if @mrs.present? %>
+  <div class="row">
+    <% @mrs.each_with_index do |mr, index| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p class="item-title"><%= link_to mr.mr, mr %></p>
+            </div>
+            <div class="panel-footer">
+              <p class="text-center"><%= index+1 %>位: 使われた回数<%= @ranking_mr_counts[mr.id] %> 回</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<h2>カバネ</h2>
+<% if @surnames.present? %>
+  <div class="row">
+    <% @surnames.each_with_index do |surname, index| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p class="item-title"><%= link_to surname.surname, surname %></p>
+            </div>
+            <div class="panel-footer">
+              <p class="text-center"><%= index+1 %>位: 使われた回数<%= @ranking_surname_counts[surname.id] %> 回</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<h2>俗称</h2>
+<% if @commonnames.present? %>
+  <div class="row">
+    <% @commonnames.each_with_index do |commonname, index| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p class="item-title"><%= link_to commonname.commonname, commonname %></p>
+            </div>
+            <div class="panel-footer">
+              <p class="text-center"><%= index+1 %>位: 使われた回数<%= @ranking_commonname_counts[commonname.id] %> 回</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
