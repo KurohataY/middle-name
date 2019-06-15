@@ -23,7 +23,7 @@ h1 {
   background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
 
-.picture{
+.back{
   background-image: linear-gradient(
     to bottom right,
     #f0faf2,

@@ -1,11 +1,10 @@
 class MiddlesController < ApplicationController
+  #ログインの確認
   before_action :require_user_logged_in
+  #共通メソッドを実行
   before_action :set_middle, only: [:show, :edit, :update, :destroy]
 
-  
   def index
-    @middle = current_user.middles.last
-    @middles = current_user.middles
   end
   
   def history
@@ -13,11 +12,13 @@ class MiddlesController < ApplicationController
   end
 
   def show
-    @middle = Middle.find(params[:id])
+    @middle = current_user.middles.last
+    @middles = current_user.middles
   end
 
   def new
     @middle = Middle.new
+    #ランダムに値を習得
     @commonname = Commonname.where( 'id >= ?', rand(Commonname.first.id..Commonname.last.id) ).first
     @mr = Mr.where( 'id >= ?', rand(Mr.first.id..Mr.last.id) ).first
     @surname = Surname.where( 'id >= ?', rand(Surname.first.id..Surname.last.id) ).first
@@ -39,7 +40,7 @@ class MiddlesController < ApplicationController
   end
 
   def update
-    if @middle.update(task_params)
+    if @middle.update(middle_params)
       flash[:success] = '作り直し成功！'
       redirect_to @task
     else
@@ -57,8 +58,8 @@ class MiddlesController < ApplicationController
   end
   
   def set_middle
-    @task = current_user.middles.find_by(id: params[:id])
-    unless @task
+    @middle = current_user.middles.find_by(id: params[:id])
+    unless @middle
       redirect_to root_url
     end
   end
