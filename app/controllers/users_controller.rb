@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show]
   
   def index
-    @users = User.all.page(params[:page])
   end
 
   def show
@@ -27,6 +26,7 @@ class UsersController < ApplicationController
 
   private
 
+  #ストロングパラメーター
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
