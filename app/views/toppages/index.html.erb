@@ -1,20 +1,12 @@
 <% if logged_in? %>
-<div>
-  <ul class="nav nav-tabs nav-justified">
-    <li><%= link_to '新規ミドルネーム作成', new_middle_path%></li>
-    <li><%= link_to '人気ランキング', rankings_middle_path%></li>
-    <li><%= link_to 'ユーザー設定', user_path(current_user) %></a></li>
-  </ul>
-</div>
-<% else %>
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h4 class= "text-center">
-        日本では、古来からカバネや氏などを今の苗字と名前の間に挟んでいました。</br>
-        なので、現代の名前で間にミドルネームを入れるとどうなるかを検証できるページです！
-      </h4>
-      <%= link_to '新規登録', signup_path, class: 'btn btn-lg btn-primary' %>
-      <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
-    </div>
+  <div>
+    <ul class="nav nav-tabs nav-justified">
+      <li><%= link_to '新規ミドルネーム作成', new_middle_path%></li>
+      <li><%= link_to '人気ランキング', rankings_middle_path%></li>
+      <li><%= link_to 'ユーザー設定', user_path(current_user) %></a></li>
+    </ul>
   </div>
+<% else %>
+  <%= link_to '新規登録', signup_path, class: 'btn btn-lg btn-primary' %>
+  <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
 <% end %>
