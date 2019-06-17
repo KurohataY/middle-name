@@ -33,3 +33,23 @@ h1 {
   );
 }
 
+.back-title{
+  position: relative;
+}
+
+.back-title img{
+  background-size: cover;
+  height: 75vh;
+  background-attachment: fixed;
+  width: 100vw;
+  
+}
+
+p{
+  color:white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+

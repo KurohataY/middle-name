@@ -20,11 +20,14 @@
     <div class="back">
       <%= render 'layouts/navbar' %>
     </div>
-    <%#タイトル%>
-    <h1 class="">ミドルネーム（日本版）！！</h1>
-    <div class="container">
-      <%= render 'layouts/flash_messages' %>
-      <%= yield %>
+    <div class="back-title">
+      <%= image_tag 'backimage2.jpg' %><br>
+      <p>
+      日本では、古来からカバネや氏などを今の苗字と名前の間に挟んでいました。</br>
+      もし、現代の名前で間にミドルネームを入れるとどうなるかを検証できるページです！
+      </p>
     </div>
+    <%= render 'layouts/flash_messages' %>
+    <%= yield %>
   </body>
 </html>
