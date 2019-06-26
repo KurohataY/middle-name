@@ -2,9 +2,11 @@ class MiddlesController < ApplicationController
   #ログインの確認
   before_action :require_user_logged_in
   #共通メソッドを実行
-  before_action :set_middle, only: [:show, :edit, :update, :destroy]
+  before_action :set_middle, only: [:edit, :update, :destroy]
 
   def index
+    @middle = current_user.middles.last
+    @middles = current_user.middles
   end
   
   def history

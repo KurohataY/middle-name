@@ -1,1 +1,15 @@
-<%= render 'users', users: @users %>
+<!--最新の投稿を表示-->
+<h2 class="text-center">ミドルネーム作成結果発表！</h2>
+<h3>
+  <li class="text-center">
+    <%= @middle.mr  %>
+    <%= @middle.surname  %>
+    <%= @middle.Lname  %>
+    <%= @middle.commonname  %>
+    <%= @middle.Fname  %>
+  </li>
+</h3>
+
+<%= link_to '作成履歴', middles_history_path %>
+<%= link_to '削除', @middle, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<%= link_to '新規作成', new_middle_path %>

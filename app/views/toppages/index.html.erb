@@ -7,6 +7,41 @@
     </ul>
   </div>
 <% else %>
+  <div class="back-title">
+    <%= image_tag 'backimage2.jpg' %><br>
+    <h1>Createing Japanese MiddleName</h1>
+  </div>
+  <div class="animation-box">
+    <h2>MiddleNameとは？</h2>
+    <p>
+      みなさんはMiddleNameってご存知ですか？</br>
+      日本ですと性＋名（LastName＋FirstName）が一般的な名前の表し方ですよね。</br>
+      しかし、外人の方の名前を見てみると、LastNameとFirstNameの間にも名前がありますよね？</br>
+      例えば、アメリカ大統領だった「John Fitzgerald Kennedy」さんですと「Fitzgerald」がミドルネームになります。
+    </p>
+  </div>
+  <div>
+    <h2>日本にはないのか？</h2>
+    <p>
+      日本では法律的には認められていないらしいです。</br>
+      しかし、昔の日本には似たようなものが存在しました。</br>
+      昔の氏名制度は
+    </p>
+      <ul>
+        <li>家名（名字）</li>
+        <li>通称</li>
+        <li>氏（本姓）</li>
+        <li>カバネ</li>
+        <li>本名</li>
+      </ul>
+      <p>のように分かれていました。</p>
+  </div>
+  <div class="animation-box">
+    <h2>実際に作ってみよう！</h2>
+    <p>
+      もし自分の名前に日本版のミドルネームがあったらどんな感じになるか実際にためしてみましょう！
+    </p>
+  </div>
   <%= link_to '新規登録', signup_path, class: 'btn btn-lg btn-primary' %>
   <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
 <% end %>
