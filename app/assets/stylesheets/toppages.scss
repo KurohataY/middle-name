@@ -3,6 +3,69 @@
 // You can use Sass (SCSS) here: http://sass-lang.com
 
 
+.back{
+  background-image: linear-gradient(
+    to bottom right,
+    #f0faf2,
+    #f0faf2 50%,
+    #fcecf5 50%,
+    #fcecf5
+  );
+}
+
+.back-title{
+  position: relative;
+}
+
+.back-title img{
+  background-size: cover;
+  height: 75vh;
+  background-attachment: fixed;
+  width: 100vw;
+}
+
+h1{
+  color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+h2{
+  text-align:center;
+}
+p{
+  text-align:center;
+}
+
+li{
+  text-align:center;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.animation-box:nth-child(odd){
+    background: #eee;
+}
+ 
+.animation-box{
+    padding: 120px;
+    transition:.5s;
+}
+ 
+.animation-box.active{
+    background: #666;
+    color: #fff;
+}
+
 
 
 

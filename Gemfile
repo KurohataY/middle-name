@@ -53,3 +53,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kaminari'
+
+gem 'jquery-waypoints-rails', '~> 2.0', '>= 2.0.5'
