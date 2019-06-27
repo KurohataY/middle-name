@@ -14,9 +14,20 @@ $(function () {
   // span タグで囲った文字とspanタグを h1 に入れ直す
   $("h1").html(heroSpan);
   // span を透明（不透明度 0%）に
-  $("span").css({opacity:0})
+  $("span").css({opacity:0});
   // 順番に span の不透明度を上げていく
-  $("span").eq(1).css({opacity:'0.0'}).animate({opacity: '1'}, 3000);
+  var n=0;
+  function func(){
+    $("span").eq(n).css({opacity:'0.0'}).animate({opacity: '1'}, 1500);
+    n++;
+    var tid = setTimeout(function(){
+      func();
+    },500);
+    if (n>heroSpan.length){
+      clearTimeout(tid);
+    }
+  }
+  func();
   
   
   console.log(heroSpan);
