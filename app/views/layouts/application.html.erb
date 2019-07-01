@@ -6,9 +6,14 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap JavaScript-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--waypoints-->
+    <%= javascript_include_tag 'jquery.waypoints.min' %>
+    <!--Animate.css-->
+    <%= stylesheet_link_tag "animate", :media => "all" %>
+    
     
     <%= csrf_meta_tags %>
 
@@ -23,5 +28,7 @@
     
     <%= render 'layouts/flash_messages' %>
     <%= yield %>
+
+    
   </body>
 </html>

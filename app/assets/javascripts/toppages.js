@@ -1,5 +1,4 @@
 $(function () {
-  
   // ヒーローイメージの文字の要素を取得
   var hero = $("h1");
   // 取得した要素から文字だけを取得する
@@ -14,23 +13,36 @@ $(function () {
   // span タグで囲った文字とspanタグを h1 に入れ直す
   $("h1").html(heroSpan);
   // span を透明（不透明度 0%）に
-  $("span").css({opacity:0});
+  // $("span").css({opacity:0});
   // 順番に span の不透明度を上げていく
   var n=0;
   function func(){
-    $("span").eq(n).css({opacity:'0.0'}).animate({opacity: '1'}, 1500);
+    // $("span").eq(n).css({opacity:'0.0'}).animate({opacity: '1'}, 1500);
+    $("h1 span").eq(n).addClass('hero-anime');
     n++;
     var tid = setTimeout(function(){
       func();
-    },500);
+    },100);
     if (n>heroSpan.length){
       clearTimeout(tid);
     }
   }
   func();
   
+  $(".animated").waypoint(function(direction) {
+    
+    if (direction === "down") {
+      $(this.element).addClass("fadeInUp");
+      $(this.element).removeClass("fadeOutUp");
+    }else if (direction === "up") {
+      $(this.element).addClass("fadeOutUp");
+      $(this.element).removeClass("fadeInUp");
+    }
+    
+  }, { offset: "80%" });
   
-  console.log(heroSpan);
-  console.log(heroSplit);
+  
 });
+
+
 

@@ -9,3 +9,7 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+# 追加したjs/cssファイルの読み込み設定
+Rails.application.config.assets.precompile += %w( jquery.waypoints.min.js )
+Rails.application.config.assets.precompile += %w( animate.css )
