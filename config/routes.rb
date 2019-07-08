@@ -14,9 +14,6 @@ Rails.application.routes.draw do
   #トップページ
   get 'toppages/index'
   
-  #履歴
-  get 'middles/history'
-  
   #ランキング
   get 'rankings/middle', to: 'rankings#middle'
 

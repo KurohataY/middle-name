@@ -10,9 +10,8 @@
         <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
       </ul>
     <% else %>
-      <li><%= link_to 'ホーム', toppages_index_path %></li>
+      <li><%= link_to 'ホーム', root_path %></li>
       <li><%= link_to 'サインイン', signup_path %></li>
-      <li><%= link_to 'ログイン', login_path %></li>
       <li><%= link_to 'ログイン', login_path %></li>
     <% end %>
   </ul>
