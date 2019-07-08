@@ -13,8 +13,20 @@
   <div class="col-xs-8">
     <ul class="nav nav-tabs nav-justified">
       <li><%= link_to '新規ミドルネーム作成', new_middle_path %></li>
-      <li><%= link_to '作成履歴', middles_history_path %></li>
       <li><%= link_to '人気ランキング', rankings_middle_path %></li>
     </ul>
+    <%# 履歴の表示 %>
+    <h2 class="text-center">今までの履歴一覧</h2>
+    
+    <%# ユーザー個人が作成したミドルネームを全て表示 %>
+    <% @middles.each do |middle| %>
+      <li class="text-center">
+        <%= middle.mr  %>
+        <%= middle.surname  %>
+        <%= middle.Lname  %>
+        <%= middle.commonname  %>
+        <%= middle.Fname  %>
+      </li>
+    <% end %>
   </div>
 </div>

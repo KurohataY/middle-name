@@ -8,10 +8,6 @@ class MiddlesController < ApplicationController
     @middle = current_user.middles.last
     @middles = current_user.middles
   end
-  
-  def history
-    @middles = current_user.middles
-  end
 
   def show
     @middle = current_user.middles.last
@@ -38,25 +34,10 @@ class MiddlesController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @middle.update(middle_params)
-      flash[:success] = '作り直し成功！'
-      redirect_to @task
-    else
-      flash.now[:danger] = '失敗！'
-      render :edit
-    end
-  end
-
   def destroy
     @middle.destroy
-
     flash[:success] = 'ミドルネームは正常に削除されました'
-    redirect_to root_url
- 
+    redirect_to middles_history_path
   end
   
   def set_middle

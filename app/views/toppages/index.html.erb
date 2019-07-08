@@ -1,11 +1,4 @@
 <% if logged_in? %>
-  <div>
-    <ul class="nav nav-tabs nav-justified">
-      <li><%= link_to '新規ミドルネーム作成', new_middle_path%></li>
-      <li><%= link_to '人気ランキング', rankings_middle_path%></li>
-      <li><%= link_to 'ユーザー設定', user_path(current_user) %></a></li>
-    </ul>
-  </div>
 <% else %>
   <div class="back-title">
     <%= image_tag 'backimage2.jpg' %><br>
