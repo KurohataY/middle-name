@@ -1,18 +1,17 @@
 <%#ナビバーのレイアウト%>
-<div class="collapse navbar-collapse back" id="bs-example-navbar-collapse-1">
+
   <ul class="navbar-left bubble-menu">
     <%#ログインの確認%>
     <% if logged_in? %>
-      <ul>
-        <li><%= link_to '新規作成', new_middle_path %></li>
-        <li><%= link_to 'プロフィール', user_path(current_user) %></li>
-        <li><%= link_to 'ランキング', rankings_middle_path %></li>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
-      </ul>
+        <ul>
+          <li><%= link_to '新規作成', new_middle_path %></li>
+          <li><%= link_to 'プロフィール', user_path(current_user) %></li>
+          <li><%= link_to 'ランキング', rankings_middle_path %></li>
+          <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+        </ul>
     <% else %>
       <li><%= link_to 'ホーム', root_path %></li>
       <li><%= link_to 'サインイン', signup_path %></li>
       <li><%= link_to 'ログイン', login_path %></li>
     <% end %>
   </ul>
-</div>

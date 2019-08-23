@@ -11,9 +11,6 @@ $transitionTime: 0.12s;
   position: relative; 
   
 }
-body{
-  background-color:#EEEEEE;
-}
 
 .bubble-menu{
   li {
@@ -44,7 +41,7 @@ body{
 
 
 $offset:10%; 
-$colors: #2196F3, #FF9800, #f44336, #009688;
+$colors: #fdeff2, #e6b422, #84a2d4, #895b8a;
 $transforms:  translate(0,-$offset), 
               translate($offset,0), 
               translate(0,$offset),
@@ -59,8 +56,6 @@ $transforms:  translate(0,-$offset),
       transition-duration: $transitionTime * $i; 
     }
   }
-  
-
 } 
 
 
@@ -85,3 +80,12 @@ $transforms:  translate(0,-$offset),
     }
   } 
 }
+.collapse{
+  display: block;
+}
+
+
+
+
+
+

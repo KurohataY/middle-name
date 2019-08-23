@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>MiddleName</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery -->
@@ -15,8 +15,8 @@
     <%= stylesheet_link_tag "animate", :media => "all" %>
     <!--ナビバーのSCSS-->
     <%= stylesheet_link_tag "navbar", :media => "all" %>
-    
-    
+   
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,12 +25,9 @@
   <body>
     <%= render 'layouts/flash_messages' %>
     <%#ナビバーの表示位置%>
-    <div class="back">
+    <div class="bg">
       <%= render 'layouts/navbar' %>
+      <%= yield %>
     </div>
-    
-    <%= yield %>
-
-    
   </body>
 </html>

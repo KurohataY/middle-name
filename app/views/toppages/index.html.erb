@@ -1,44 +1,36 @@
 <% if logged_in? %>
 <% else %>
-  <div class="back-title">
-    <%= image_tag 'backimage2.jpg' %><br>
-    <h1>Createing Japanese MiddleName</h1>
-  </div>
-  <div class="animation-box">
-    <h2 class="animated">MiddleNameとは？</h2>
-    <p class="animated">
-      みなさんはMiddleNameってご存知ですか？</br>
-      日本ですと性＋名（LastName＋FirstName）が一般的な名前の表し方ですよね。</br>
-      しかし、外人の方の名前を見てみると、LastNameとFirstNameの間にも名前がありますよね？</br>
-      例えば、アメリカ大統領だった「John Fitzgerald Kennedy」さんですと「Fitzgerald」がミドルネームになります。
-    </p>
-  </div>
-  <div>
-    <h2 class="animated">日本にはないのか？</h2>
-    <p class="animated">
-      日本では法律的には認められていないらしいです。</br>
-      しかし、昔の日本には似たようなものが存在しました。</br>
-      昔の氏名制度は
-    </p>
-      <ul class="animated">
+  <h1>Createing Japanese MiddleName</h1>
+  <div class="text-area animated">
+    <div class="text-box">
+      <h2 class="">MiddleNameとは？</h2>
+      <p class="">
+        みなさんはMiddleNameってご存知ですか？日本ですと性＋名（LastName＋FirstName）が一般的な名前の表し方ですよね。しかし、外人の方の名前を見てみると、LastNameとFirstNameの間にも名前がありますよね？例えば、アメリカ大統領だった「John Fitzgerald Kennedy」さんですと「Fitzgerald」がミドルネームになります。
+      </p>
+    </div>
+    <div class="text-box">
+      <h2 class="">日本にはないのか？</h2>
+      <p class="">
+        日本では法律的には認められていないらしいです。しかし、昔の日本には似たようなものが存在しました。昔の氏名制度は
+      </p>
+      <ul class="">
         <li>家名（名字）</li>
         <li>通称</li>
         <li>氏（本姓）</li>
         <li>カバネ</li>
         <li>本名</li>
       </ul>
-      <p class="animated">のように分かれていました。</p>
-  </div>
-  <div class="animation-box">
-    <h2 class="animated">実際に作ってみよう！</h2>
-    <p class="animated">
-      もし自分の名前に日本版のミドルネームがあったらどんな感じになるか実際にためしてみましょう！
-    </p>
+      <p class="">のように分かれていました。</p>
+    </div>
+    <div class="text-box">
+      <h2 class="">実際に作ってみよう！</h2>
+      <p class="">
+        もし自分の名前に日本版のミドルネームがあったらどんな感じになるか実際にためしてみましょう！
+      </p>
+      </div>
+    </div>
     <div class="text-center animated">
       <%= link_to '新規登録', signup_path, class: 'buttonFont' %>
       <%= link_to 'ログイン', login_path, class: 'buttonFont' %>
     </div>
-    
-  </div>
-  
 <% end %>
