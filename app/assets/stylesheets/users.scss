@@ -4,11 +4,6 @@
 $ja_color: rgba(246,191,188,0.7);
 
 
-.session_css{
-  text-align:center;
-  padding:0 30px;
-}
-
 .form-group{
   margin-bottom:40px;
 }
@@ -25,7 +20,7 @@ $ja_color: rgba(246,191,188,0.7);
   margin:0 auto;
   text-align: center;
   width:50%;
-  color:white;
+  color:#bbc8e6;
   font-size:50px;
   @media (max-width: 550px){
     font-size:30px;
@@ -55,13 +50,15 @@ $ja_color: rgba(246,191,188,0.7);
   margin-top:30px;
   font-size:30px;
   padding:10px;
-  background-color: $ja_color;
 }
 
 .text-center{
   color:white;
   font-size:20px;
-  background-color: $ja_color;
   margin:10px;
+}
+
+.strong_color{
+  color:#c53d43;
 }
 

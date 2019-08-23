@@ -2,10 +2,64 @@
   text-align:center;
   font-size:50px;
   transform:scale(0,0);
-  
+  background-color: white;
   
   &.result-anime{
     transition: 10s cubic-bezier(.47,1.32,.53,-0.28);
     transform:scale(1,1);
   }
+}
+
+.result_title{
+  text-align:center;
+  color:white;
+  padding:90px;
+  font-size:55px;
+  @media (max-width: 550px){
+    font-size:35px;
+    padding:90px 0 0 0;
+  }
+}
+
+.btn_group{
+  text-align:center;
+  padding:30px;
+}
+
+.result_btn{
+  margin:0 5px;
+  font-size:30px;
+}
+
+.result_box{
+  margin:0 20px;
+}
+
+.type_name{
+  margin-top:10px;
+  text-align:center;
+  color:white;
+  font-size:30px;
+  @media (max-width: 550px){
+    font-size:20px;
+  }
+  
+}
+.panel{
+  background-color: rgba(246,191,188,0.7);
+}
+
+.count_use{
+  
+}
+
+.panel-footer{
+  background-color:#00a497;
+  opacity:0.7;
+}
+
+.type_name_r{
+  text-align:center;
+  color:#180614;
+  font-size:25px;
 }

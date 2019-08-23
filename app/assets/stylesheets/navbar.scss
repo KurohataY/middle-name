@@ -84,7 +84,32 @@ $transforms:  translate(0,-$offset),
   display: block;
 }
 
+.ex_nav{
+  color:white;
+  padding:35px 0;
+  margin-left:120px;
+  font-size:20px;
+  @media (max-width:550px){
+    display:none;
+  }
+}
 
+.hover_menu{
+  &:hover{
+    .ex_nav,.ex_nav_sp{
+      visibility:hidden;
+    }
+  }
+  
+}
+.ex_nav_sp{
+  color:white;
+  padding:35px 0;
+  font-size:20px;
+  @media (min-width:550px){
+    display:none;
+  }
+}
 
 
 

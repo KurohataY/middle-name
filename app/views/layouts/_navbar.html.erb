@@ -1,5 +1,5 @@
 <%#ナビバーのレイアウト%>
-
+<div class="hover_menu">
   <ul class="navbar-left bubble-menu">
     <%#ログインの確認%>
     <% if logged_in? %>
@@ -10,8 +10,14 @@
           <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
         </ul>
     <% else %>
-      <li><%= link_to 'ホーム', root_path %></li>
-      <li><%= link_to 'サインイン', signup_path %></li>
-      <li><%= link_to 'ログイン', login_path %></li>
+      <li><%= link_to 'ホーム', root_path,data: {"turbolinks" => false} %></li>
+      <li><%= link_to 'サインイン', signup_path,data: {"turbolinks" => false} %></li>
+      <li><%= link_to 'ログイン', login_path,data: {"turbolinks" => false} %></li>
     <% end %>
   </ul>
+  <div class="ex_nav">←メニューはこちら！触ってみて！</div>
+  <div class="ex_nav_sp">↑メニューはこちら！触ってみて！</div>
+</div>
+
+
+
