@@ -37,7 +37,7 @@ class MiddlesController < ApplicationController
   def destroy
     @middle.destroy
     flash[:success] = 'ミドルネームは正常に削除されました'
-    redirect_to middles_history_path
+    redirect_to root_url
   end
   
   def set_middle

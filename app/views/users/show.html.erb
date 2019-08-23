@@ -1,32 +1,24 @@
 <%#プロフィール画面%>
-<div class="row">
-  <aside class="col-xs-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= @user.name %></h3>
-      </div>
-      <div class="panel-body">
-        <img class="media-object img-rounded img-responsive" src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
-      </div>
-    </div>
-  </aside>
-  <div class="col-xs-8">
-    <ul class="nav nav-tabs nav-justified">
-      <li><%= link_to '新規ミドルネーム作成', new_middle_path %></li>
-      <li><%= link_to '人気ランキング', rankings_middle_path %></li>
-    </ul>
-    <%# 履歴の表示 %>
-    <h2 class="text-center">今までの履歴一覧</h2>
-    
-    <%# ユーザー個人が作成したミドルネームを全て表示 %>
-    <% @middles.each do |middle| %>
-      <li class="text-center">
-        <%= middle.mr  %>
-        <%= middle.surname  %>
-        <%= middle.Lname  %>
-        <%= middle.commonname  %>
-        <%= middle.Fname  %>
-      </li>
-    <% end %>
-  </div>
+<div class="pro_box">
+  <%= @user.name %>さんこんにちは！<br>
+  今日は何をされますか？
 </div>
+
+<div class="row">
+  <%= link_to '新規ミドルネーム作成', new_middle_path,class: 'white_box col-sm-5 col-xs-5' %>
+  <div class="col-sm-2 col-xs-2"></div>
+  <%= link_to '人気ランキング', rankings_middle_path,class: 'white_box col-sm-5 col-xs-5'%>
+</div>
+<%# 履歴の表示 %>
+<h2 class="pro_h2">今までの作成履歴はこちら！</h2>
+
+<%# ユーザー個人が作成したミドルネームを全て表示 %>
+<% @middles.each do |middle| %>
+<li class="text-center">
+  <%= middle.mr  %>
+  <%= middle.surname  %>
+  <%= middle.Lname  %>
+  <%= middle.commonname  %>
+  <%= middle.Fname  %>
+</li>
+<% end %>
