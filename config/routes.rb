@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   #セッション
   get 'sessions/new'
   get 'sessions/create'
@@ -13,13 +13,13 @@ Rails.application.routes.draw do
 
   #トップページ
   get 'toppages/index'
-  
+
   #ランキング
   get 'rankings/middle', to: 'rankings#middle'
 
   #root
   root to: 'toppages#index'
-  
+
   #ログイン・ログアウト
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   #新規登録
   get 'signup', to: 'users#new'
-  
+
   resources :users, only: [:index, :show, :new, :create]
   resources :middles
   resources :commonnames

@@ -1,5 +1,5 @@
 // Place all the styles related to the toppages controller here.
-// They will automatically be included in application.css.
+// They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com
 
 h1{
@@ -20,12 +20,12 @@ h1{
     }
   }
 }
- 
+
 .animation-box{
     padding: 120px;
     transition:.5s;
 }
- 
+
 .animation-box.active{
     background: #666;
     color: #fff;
@@ -44,7 +44,8 @@ h1{
   }
   display: flex;
   justify-content: space-between;
-  margin: 200px auto;
+  margin: 200px auto 0 auto;
+  padding-bottom: 200px
 }
 .text-box{
   @media (min-width: 550px){
@@ -87,5 +88,3 @@ h1{
 .buttonFont :hover{
     box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);/*浮き上がるように*/
 }
-
-

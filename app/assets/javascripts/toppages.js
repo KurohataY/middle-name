@@ -28,9 +28,9 @@ $(function () {
     }
   }
   func();
-  
+
   $(".animated").waypoint(function(direction) {
-    
+
     if (direction === "down") {
       $(this.element).addClass("fadeInUp");
       $(this.element).removeClass("fadeOutUp");
@@ -38,11 +38,8 @@ $(function () {
       $(this.element).addClass("fadeOutUp");
       $(this.element).removeClass("fadeInUp");
     }
-    
-  }, { offset: "80%" });
-  
-  
+
+  }, { offset: "50%" });
+
+
 });
-
-
-
