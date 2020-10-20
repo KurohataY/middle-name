@@ -3,30 +3,25 @@
   <head>
     <title>MiddleName</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap JavaScript-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!--waypoints-->
-    <%= javascript_include_tag 'jquery.waypoints.min' %>
-    <!--Animate.css-->
-    <%= stylesheet_link_tag "animate", :media => "all" %>
-    <!--ナビバーのSCSS-->
-    <%= stylesheet_link_tag "navbar", :media => "all" %>
-   
 
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!--waypoints-->
+    <%= javascript_include_tag 'jquery.waypoints.min' %>
+    <!--ナビバーのSCSS-->
+    <%= stylesheet_link_tag "navbar", :media => "all" %>
+    <!-- animate.css  -->
+    <%= stylesheet_link_tag "animate", :media => "all" %>
+
+    <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <body>
-    <%= render 'layouts/flash_messages' %>
     <%#ナビバーの表示位置%>
     <div class="bg">
       <%= render 'layouts/navbar' %>
+      <%= render 'layouts/flash_messages' %>
       <%= yield %>
     </div>
   </body>
