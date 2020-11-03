@@ -6,8 +6,6 @@
 
     <%= csrf_meta_tags %>
 
-    <!--waypoints-->
-    <%= javascript_include_tag 'jquery.waypoints.min' %>
     <!--ナビバーのSCSS-->
     <%= stylesheet_link_tag "navbar", :media => "all" %>
     <!-- animate.css  -->
@@ -21,8 +19,8 @@
     <%#ナビバーの表示位置%>
     <div class="bg">
       <%= render 'layouts/navbar' %>
-      <%= render 'layouts/flash_messages' %>
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

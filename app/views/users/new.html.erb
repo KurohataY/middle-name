@@ -1,21 +1,17 @@
-<div class="session_css">
-  <%= form_for(@user) do |f| %>
-  <%= render 'layouts/error_messages', model: f.object %>
-    <div class="form-group">
-      <%= f.text_field :name,:placeholder => "ニックネームor名前", class: 'form-control' %>
-    </div>
+<div class="session_css is-mobile">
+  <div class="child">
+    <%= form_for(@user) do |f| %>
+      <%= render 'layouts/error_messages', model: f.object %>
 
-    <div class="form-group">
-      <%= f.email_field :email,:placeholder => "メールアドレスを入力してね！", class: 'form-control' %>
-    </div>
+      <%= f.text_field :name,:placeholder => "ニックネームor名前", class: 'input is-info form-group is-rounded' %>
 
-    <div class="form-group">
-      <%= f.password_field :password,:placeholder => "パスワードを入力してね！", class: 'form-control' %>
-    </div>
+      <%= f.email_field :email,:placeholder => "メールアドレスを入力してね！", class: 'input is-info form-group is-rounded' %>
 
-    <div class="form-group">
-      <%= f.password_field :password_confirmation,:placeholder => "パスワード再確認！", class: 'form-control' %>
-    </div>
-    <%= f.submit '新規登録！', class: 'btn btn-primary btn-block' %>
-  <% end %>
+      <%= f.password_field :password,:placeholder => "パスワードを入力してね！", class: 'input is-info form-group is-rounded' %>
+
+      <%= f.password_field :password_confirmation,:placeholder => "パスワード再確認！", class: 'input is-info form-group is-rounded' %>
+
+      <%= f.submit '新規登録！', class: 'button is-primary' %>
+    <% end %>
+  </div>
 </div>

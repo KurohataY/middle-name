@@ -11,6 +11,7 @@ class CreateMiddles < ActiveRecord::Migration[5.0]
       t.string :commonname
       t.string :Fname
       t.timestamps
+      t.string :timestamps
     end
   end
 end

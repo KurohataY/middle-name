@@ -34,12 +34,13 @@
       <div class="navbar-item">
         <div class="buttons">
           <strong>
-            <%= link_to '新規登録', signup_path,data: {"turbolinks" => false}, class: "button is-primary" %>
+            <%= link_to '新規登録画面', signup_path,data: {"turbolinks" => false}, class: "button is-primary" %>
           </strong>
-          <%= link_to 'ログイン', login_path,data: {"turbolinks" => false}, class: "button is-light" %>
+          <%= link_to 'ログイン画面', login_path,data: {"turbolinks" => false}, class: "button is-light" %>
         </div>
       </div>
     </div>
     <% end %>
   </div>
+  <%= render 'layouts/flash_messages' %>
 </nav>

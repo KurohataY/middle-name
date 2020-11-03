@@ -39,16 +39,16 @@ class MiddlesController < ApplicationController
     flash[:success] = 'ミドルネームは正常に削除されました'
     redirect_to root_url
   end
-  
+
   def set_middle
     @middle = current_user.middles.find_by(id: params[:id])
     unless @middle
       redirect_to root_url
     end
   end
-  
+
   def middle_params
     params.require(:middle).permit(:Lname,:Fname,:mr,:surname,:commonname,:commonname_id,:surname_id,:mr_id)
   end
-  
+
 end

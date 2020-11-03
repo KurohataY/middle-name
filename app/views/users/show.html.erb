@@ -1,24 +1,38 @@
-<%#プロフィール画面%>
-<div class="pro_box">
-  <strong class="strong_color"><%= @user.name %></strong>さんこんにちは！<br>
-  今日は何をされますか？
-</div>
+<div class="body">
+  <div class="tile">
+    <div class="tile is-parent is-vertical ">
+      <article class="tile is-child notification is-info text-center is-6">
+        <p class="title"><%= @user.name %>さんこんにちは！</p>
+        <p class="subtitle">今日は何をされますか？<br>メニューバー からお選びください！</p>
+      </article>
+    </div>
+  </div>
 
-<div class="row">
-  <%= link_to '新規ミドルネーム作成', new_middle_path,class: 'white_box col-sm-5 col-xs-5' %>
-  <div class="col-sm-2 col-xs-2"></div>
-  <%= link_to '人気ランキング', rankings_middle_path,class: 'white_box col-sm-5 col-xs-5'%>
+  <div class="text-center">
+    <p class="subtitle text-color is-3">今までの作成履歴はこちら！</p>
+    <table class="table is-full">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>氏</th>
+          <th>名前</th>
+          <th>カバネ</th>
+          <th>俗名</th>
+          <th>名字</th>
+        </tr>
+        <% @middles.each do |middle| %>
+          <tbody>
+            <tr>
+              <th><%= middle.id %></th>
+              <th><%= middle.mr %></th>
+              <th><%= middle.Lname %></th>
+              <th><%= middle.surname %></th>
+              <th><%= middle.commonname %></th>
+              <th><%= middle.Fname %></th>
+            </tr>
+          </tbody>
+        <% end %>
+      </thead>
+    </table>
+  </div>
 </div>
-<%# 履歴の表示 %>
-<h2 class="pro_h2">今までの作成履歴はこちら！</h2>
-
-<%# ユーザー個人が作成したミドルネームを全て表示 %>
-<% @middles.each do |middle| %>
-<li class="text-center">
-  <%= middle.mr  %>
-  <%= middle.surname  %>
-  <%= middle.Lname  %>
-  <%= middle.commonname  %>
-  <%= middle.Fname  %>
-</li>
-<% end %>

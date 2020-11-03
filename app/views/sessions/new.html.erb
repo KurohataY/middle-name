@@ -1,15 +1,13 @@
-<div class="session_css">
-  <%#ログイン処理%>
-  <%= form_for(:session, url: login_path) do |f| %>
+<div class="session_css is-mobile">
+  <div class="child">
+    <%= form_for(:session, url: login_path) do |f| %>
 
-    <div class="form-group">
-      <%= f.email_field :email,:placeholder => "メールアドレスを入力してね！" , class: 'form-control' %>
-    </div>
+    <%= f.email_field :email,:placeholder => "メールアドレスを入力してね！" , class: 'input is-info form-group is-rounded' %>
 
-    <div class="form-group">
-      <%= f.password_field :password,:placeholder => "パスワードを入力してね！" , class: 'form-control' %>
-    </div>
+    <%= f.password_field :password,:placeholder => "パスワードを入力してね！" , class: 'input is-info form-group is-rounded' %>
 
-    <%= f.submit 'ログイン！', class: 'btm_css' %>
-  <% end %>
+    <%= f.submit 'ログイン！', class: 'button is-primary' %>
+
+    <% end %>
+  </div>
 </div>

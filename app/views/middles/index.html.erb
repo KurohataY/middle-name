@@ -1,17 +1,14 @@
-<!--最新の投稿を表示-->
-<div class="result_title">ミドルネーム作成結果発表！</div>
-<div class="result_box">
-  <p id="result">
-    <%= @middle.mr  %>
-    <%= @middle.surname  %>
-    <%= @middle.Lname  %>
-    <%= @middle.commonname  %>
-    <%= @middle.Fname  %>
-  </p>
+<div class="text-center design child">
+  <div class="title">ミドルネーム作成結果発表！</div>
+  <div class="bg-box">
+    <h1>
+      <%= @middle.mr %>
+      <%= @middle.surname %>
+      <%= @middle.Lname %>
+      <%= @middle.commonname %>
+      <%= @middle.Fname %>
+    </h1>
+  </div>
+  <%= link_to '削除', @middle, method: :delete, data: { confirm: '本当に削除してよろしいですか？' },class: 'button is-danger' %>
+  <%= link_to 'プロフィール', user_path(current_user),class: 'button is-primary' %>
 </div>
-<div class="btn_group">
-  <%= link_to '削除', @middle, method: :delete, data: { confirm: '本当に削除してよろしいですか？' },class: 'btm_css result_btn' %>
-  <%= link_to 'プロフィール', user_path(current_user),class: 'btm_css result_btn' %>
-</div>
-
-
