@@ -2,21 +2,19 @@
 <div class="session_css">
   <%= form_for (@middle)do |f| %>
     <div class="form-group">
-      <%= f.text_field :Lname,:placeholder => "名字を入力してね！" , class: 'form-control'  %>
+      <%= f.text_field :Lname,:placeholder => "名字を入力してね！" , class: 'input is-info form-group is-rounded'  %>
     </div>
     <div class="form-group">
-      <%= f.text_field :Fname,:placeholder => "下の名前を入力してね！" , class: 'form-control'  %>
+      <%= f.text_field :Fname,:placeholder => "下の名前を入力してね！" , class: 'input is-info form-group is-rounded'  %>
     </div>
       <%= f.hidden_field :mr, value: @mr.mr%>
       <%= f.hidden_field :surname, value: @surname.surname%>
       <%= f.hidden_field :commonname, value: @commonname.commonname%>
-      
+
       <%= f.hidden_field :mr_id, value: @mr.id%>
       <%= f.hidden_field :surname_id, value: @surname.id%>
       <%= f.hidden_field :commonname_id, value: @commonname.id%>
-      <%= f.submit '投稿', class:"btm_css"%>
-    
+      <%= f.submit '投稿', class:"button is-primary"%>
+
   <% end %>
 </div>
-
-
