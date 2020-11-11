@@ -1,4 +1,4 @@
-FROM ruby:2.7.1
+FROM ruby:2.7.2
 
 RUN apt update && apt install -y lsb-release \
     && apt remove -y libmariadb-dev-compat libmariadb-dev
@@ -14,7 +14,7 @@ RUN dpkg -i mysql-common_8.0.18-1debian10_amd64.deb \
     mysql-community-client-core_8.0.18-1debian10_amd64.deb \
     mysql-community-client_8.0.18-1debian10_amd64.deb \
     libmysqlclient-dev_8.0.18-1debian10_amd64.deb
-    
+
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
