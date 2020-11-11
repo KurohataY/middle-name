@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_05_31_044534) do
     t.string "Fname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "timestamps"
     t.index ["commonname_id"], name: "index_middles_on_commonname_id"
     t.index ["mr_id"], name: "index_middles_on_mr_id"
     t.index ["surname_id"], name: "index_middles_on_surname_id"
