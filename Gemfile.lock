@@ -115,7 +115,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     multi_json (1.13.1)
-    mysql2 (0.4.10)
+    mysql2 (0.5.3)
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
@@ -209,7 +209,7 @@ DEPENDENCIES
   jquery-waypoints-rails
   kaminari
   listen
-  mysql2
+  mysql2 (~> 0.5)
   pg
   puma
   rails (~> 6)
