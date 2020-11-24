@@ -17,3 +17,5 @@
 .byebug_history
 docker/
 .DS_Store
+.env
+vendor/bundle/ruby/2.7.0/gems/
